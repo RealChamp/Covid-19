@@ -135,24 +135,13 @@
     }
 }
 
+
+
 .contagion {
     padding-bottom: 150px;
 
     &__info {
         max-width: 570px;
-        padding: 0 5px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .title {
-        margin-bottom: 30px;
-    }
-
-    .contagion__text {
-        font-size: 1.1rem;
-        line-height: 2;
-        margin-bottom: 110px;
     }
 
     &-container {
@@ -207,6 +196,37 @@
             line-height: 1.5;
         }
     }
+}
+
+.symptomps {
+    position: relative;
+
+    &__text {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__info {
+        max-width: 720px;
+    }
+
+    &-virus1 {
+        position: absolute;
+        left: 35px;
+        bottom: 300px;
+    }
+
+    &-virus2 {
+        position: absolute;
+        right: 35px;
+        bottom: 10px;
+    }
+
+
 }
 
 
