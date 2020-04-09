@@ -39,20 +39,13 @@
     background-position: right 0;
 
 
-
     &-info {
         max-width: 650px;
         margin-left: 220px;
         padding: 0 5px;
-        text-transform: capitalize;
 
         .header__info-pre-title {
-            font-family: 'Red Hat Display';
-            font-weight: 700;
-            font-size: 2rem;
-            color: $orange;
             text-transform: none;
-            line-height: 1.22;
             margin-bottom: 15px;
         }
 
@@ -81,6 +74,64 @@
             line-height: 3.3;
             box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
         }
+    }
+}
+
+.overview {
+    display: flex;
+    min-height: 820px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__img-wrapper {
+        margin-left: 125px;
+    }
+
+    &__img {
+        transform: rotate(10deg);
+    }
+
+    &__info {
+        max-width: 650px;
+        width: 100%;
+        padding: 0 5px;
+
+        &-pre-title {
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            margin-bottom: 25px;
+        }
+
+        &-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
+        }
+
+        &-link {
+            padding: 21px 50px 23px 50px;
+            background: rgba(250, 86, 82, 0.15);
+            border-radius: 65px;
+            color: $orange;
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 3.2;
+        }
+    }
+
+    .virus-1 {
+        position: absolute;
+        bottom: 150px;
+        right: -145px;
+    }
+
+    .virus-2 {
+        position: absolute;
+        bottom: -15px;
+        right: 15px;
     }
 }
 
