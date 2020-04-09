@@ -135,6 +135,80 @@
     }
 }
 
+.contagion {
+    padding-bottom: 150px;
+
+    &__info {
+        max-width: 570px;
+        padding: 0 5px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .contagion__text {
+        font-size: 1.1rem;
+        line-height: 2;
+        margin-bottom: 110px;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -10px;
+
+    }
+
+    &__item {
+        min-height: 575px;
+        max-width: 470px;
+        flex-basis: 33.333%;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &.active::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 6px;
+            background-color: $orange;
+            border-radius: 0px 0px 100px 100px;
+        }
+
+        &-img {
+            margin-bottom: 55px;
+        }
+
+        &-info {
+            max-width: 365px;
+            padding: 0 5px;
+        }
+
+        &-title {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: $teal;
+        }
+
+        &-text {
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+    }
+}
+
 
 
 
