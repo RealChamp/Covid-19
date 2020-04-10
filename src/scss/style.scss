@@ -312,6 +312,7 @@
             background-color: #fff;
             box-shadow: 0px 7px 76px rgba(146, 53, 46, 0.18);
             border-radius: 4px;
+            cursor: pointer;
         }
 
         .map-search-icon {
@@ -421,17 +422,22 @@
 
 
 
-        .angle-left,
-        .angle-right {
+        .moveUp,
+        .moveDown {
             box-sizing: content-box;
             border-right: 2px solid #DEE1ED;
             padding-right: 10px;
+        }
+
+        .moveUp .active,
+        .moveDown .active {
+            stroke: $orange;
             cursor: pointer;
         }
 
-        .angle-left {}
+        .moveUp {}
 
-        .angle-right {
+        .moveDown {
             transform: rotate(180deg);
 
 
@@ -470,7 +476,52 @@
             }
         }
     }
+}
 
+.contact {
+    max-width: 750px;
+    padding: 0 5px;
+    margin: 0 auto;
+    text-align: center;
+
+    &__title {
+        font-weight: 500;
+        font-size: 4rem;
+        color: $teal;
+        line-height: 1.1;
+        margin-bottom: 50px;
+    }
+
+    &__form {
+        position: relative;
+
+        &-input {
+            font-size: 1.25rem;
+            max-width: 750px;
+            height: 100px;
+            width: 100%;
+            background-color: #fff;
+            border: none;
+            border-radius: 57px;
+            box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+            padding-left: 40px;
+
+        }
+
+        &-btn {
+            position: absolute;
+            top: 50%;
+            right: 17px;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: $orange;
+            border: none;
+            border-radius: 157px;
+            padding: 25px 80px;
+        }
+    }
 }
 
 
