@@ -1,0 +1,341 @@
+@media screen and (max-width: 1800px) {
+    .header__main-img-wrapper {
+
+        transform: scale(0.7);
+        top: 105px;
+
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    .header__main-img-wrapper {
+
+        transform: scale(0.5);
+        top: 155px;
+        right: -250px;
+
+    }
+
+    .contagion__item:first-of-type::after {
+        background-image: none;
+    }
+
+    .symptomps-virus1,
+    .symptomps-virus2 {
+        display: none;
+    }
+
+    .reports__inner {
+        flex-direction: column;
+    }
+
+    .map__img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+
+    .reports .map-wrapper .map-controls, 
+    .reports .map-wrapper .map-search {
+        top: 125px;
+    }
+
+    .reports-wrapper {
+        margin-top: 200px;
+        margin-left: 0; 
+        max-width: 1920px;
+        width: 100%;
+      
+    }
+
+}
+
+@media screen and (max-width: 1480px) {
+    .header__main {
+        display: block;
+
+        &-info {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 50px;    
+    }
+
+    }
+    .header__main-img-wrapper {
+        position: static;
+        transform: scale(1);
+        text-align: center;
+
+
+    }
+
+    .overview {
+        display: block;
+
+
+        &__img-wrapper {
+            text-align: center;
+            margin-left: 0;
+
+        }
+
+        &__info {
+            margin: 0 auto;
+            margin-top: 45px;
+            text-align: center;
+             
+        }
+    }
+
+
+    .contagion {
+        margin-top: 75px;
+        padding-bottom: 75px;
+    }
+    
+
+    .contagion-container {
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+        }
+
+        .contagion__item {
+           max-width: 100%;
+           width: 100%;
+           margin-bottom: 25px;
+        }
+
+}
+
+@media screen and (max-width: 1130px) {
+  .prevention__item {
+      flex-direction: column-reverse;
+
+      &.reverse {
+          flex-direction: column-reverse;
+      }
+
+      &-img-wrapper {
+          margin-bottom: 45px;
+      }
+
+      &-text {
+          margin-bottom: 75px;
+      }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .footer__list { 
+        margin-left: 150px;
+    }
+
+    .footer__list-item {
+        width: 40%;
+        margin-left: 0;
+        margin-top: 15px;
+
+       
+    }
+}
+
+@media screen and (max-width: 910px) {
+
+    .pre-title {
+        font-size: 1.5rem;
+    }
+
+    .header__main-info .header__info-title,
+    .overview__info-title,
+    .title {
+        font-size: 2.35rem;
+    }
+
+    .header__main-info .header__info-link {
+        padding: 20px 40px 23px 40px;
+    }
+
+    .header__navigation .header__navigation-list {
+        display: none;
+    }
+
+
+    .header__main-img-wrapper {
+        height: 50%;
+    }
+
+    .humburger {
+        display: block;
+    }
+
+    .header {
+        &__navigation-list {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 120px;
+            z-index: 100;
+            background-color: #fff;
+            padding-bottom: 30px;
+            border-top: 2px solid $orange;
+
+            &__item:not(:last-child) {
+                width: 100%;
+                margin-right: 0;
+                
+           
+            }
+
+            &__item:last-child {
+                max-width: 200px;
+                margin: 0 auto;
+                margin-top: 25px;
+              
+            }
+
+            &__item {
+                display: block;
+                font-size: 1.35rem;
+                border-bottom: 2px solid $orange;
+                text-align: center;
+         
+                margin-left: 0;
+                padding: 15px 0;
+              
+            }
+        }
+    }
+
+    .virus-1,
+    .virus-2 {
+        display: none;
+    }
+
+    .prevention__item-count {
+        display: block;
+        text-align: center;
+        padding: 15px 5px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .prevention__item-title {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .reports-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        min-height: 300px;
+        margin-bottom: 35px;
+    }
+
+    .footer__list { 
+        margin-left: 0;
+    } 
+
+    .footer__list-item {
+        width: 100%;
+        text-align: center;  
+    }
+
+    .reports-wrapper {
+        margin-top: 110px;
+    }
+   
+}
+
+@media screen and (max-width: 576px) {
+    .reports .map-wrapper .map-search,
+    .reports .map-wrapper .map-controls,
+    .map-wrapper {
+            display: none;
+    }
+
+    .reports__heading-title {
+       margin: 0 auto; 
+    }
+
+    .reports__heading-controls {
+        display: none;
+    }
+
+    .contact__title {
+        font-size: 2.8rem;
+    }
+
+    .contact__form-btn {
+        position: static; 
+        display: block;
+        margin: 0 auto;
+        margin-top: 75px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .pre-title {
+        font-size: 1.2rem;
+    }
+
+    .header__main {
+        min-height: 715px;
+    }
+
+    .header__main-info .header__info-title {
+        font-size: 1.6rem;
+    }
+
+    .header__main-info .header__info-text,
+    .overview__info-text{
+    font-size: 1.15rem;
+    }
+
+    .header__main-info .header__info-link {
+        padding: 15px 30px 18px 30px;
+    }
+
+    .overview__info-link {
+        padding: 18px 40px 20px 40px;
+    }
+
+    .overview__img-wrapper {
+        margin-top: 50px;
+        height: 50%;
+    }
+
+    .reports__item-country-name {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .prevention__item-img-wrapper {
+        margin-bottom: 0;
+        height: 450px;
+ 
+    }
+
+    .prevention__item-title {
+        font-size: 2.225rem;
+    }
+
+    .prevention__text {
+        margin-bottom: 0;
+    }
+
+    .reports__heading-title {
+            font-size: 2.3rem;
+    }
+
+
+}

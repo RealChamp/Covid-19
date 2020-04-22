@@ -12,31 +12,58 @@
         justify-content: space-between;
         align-items: center;
         min-height: 150px;
+        position: relative;
     }
 
     &__navigation-list {
+        
 
-        &__item {
+        &__item:not(:last-child) {
             font-size: 1.125rem;
             margin-right: 30px;
         }
 
         &__contact {
-            padding: 15px 45px;
+            font-size: 1.15rem;
+            font-weight: 500;
             border: 2px solid $orange;
             border-radius: 46px;
+            padding: 15px 45px;
+            transition: all 350ms ease;     
+            cursor: pointer;
+
+            &:hover {
+                background-color: $orange;
+            }
+
+            &:hover .header__navigation-list__link-contact {
+                color: #fff;
+            }
+        }
+
+        &__link-contact {
             color: $orange;
-            font-weight: 500;
         }
     }
+
 }
 
 .header__main {
     min-height: 900px;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
-    background-position: right 0;
+
+    &-img-wrapper  {
+        position: absolute;
+        right: -120px;
+        height: 812px;
+
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+
+    }
 
 
     &-info {
@@ -73,6 +100,12 @@
             border-radius: 65px;
             line-height: 3.3;
             box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+            transition: all 350ms ease;
+
+            &:hover {
+                color: $orange;
+                background-color: #fff;
+            }
         }
     }
 }
@@ -83,14 +116,18 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: row-reverse;
 
     &__img-wrapper {
         margin-left: 125px;
+        height: 720px;
+
+        img {
+             max-width: 100%;
+             height: 100%;
+        }
     }
 
-    &__img {
-        transform: rotate(10deg);
-    }
 
     &__info {
         max-width: 650px;
@@ -119,17 +156,24 @@
             font-weight: 600;
             font-size: 1.25rem;
             line-height: 3.2;
+            transition: all 350ms ease;
+
+            &:hover {
+                color: #fff;
+                background-color: $orange;
+            }
         }
     }
 
-    .virus-1 {
+    .virus-1,
+    .virus-2 {
         position: absolute;
         bottom: 150px;
         right: -145px;
+        z-index: -1;
     }
 
     .virus-2 {
-        position: absolute;
         bottom: -15px;
         right: 15px;
     }
@@ -147,7 +191,8 @@
     &-container {
         display: flex;
         justify-content: space-between;
-        margin: 0 -10px;
+        flex-wrap: wrap;
+        padding: 15px 0;
 
     }
 
@@ -220,14 +265,22 @@
         margin-bottom: 0;
     }
 
-    &__img {
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 150px;
-    }
+ 
 
     &__info {
         max-width: 720px;
+    }
+
+    &__img-wrapper {
+        height: 877px;
+     
+        .symptomps__img {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 150px;
+        }
     }
 
     &-virus1 {
@@ -275,7 +328,6 @@
             width: 75px;
             height: 75px;
             padding: 10px 15px;
-            margin-left: -110px;
         }
 
         &-title {
@@ -283,7 +335,23 @@
             font-size: 2.875rem;
             font-weight: 500;
             color: $teal;
-            margin-left: 40px;
+            margin-left: 80px;
+        }
+
+        &-text {
+            font-size: 1.125rem;
+            line-height: 2;
+            margin-top: 30px;
+            color: $dark;
+        }
+
+        &-img-wrapper {
+            height: 590px;
+
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
         }
     }
 
@@ -292,6 +360,7 @@
 
 
 .reports {
+ 
 
     &__inner {
         display: flex;
@@ -303,6 +372,14 @@
         margin-left: -50px;
         position: relative;
 
+       .map__img-wrapper {
+           height: 570px;
+
+           .map__img {
+               max-width: 100%;
+               height: 100%;
+           }
+       }
         .map-search {
             position: absolute;
             top: -25px;
@@ -435,16 +512,12 @@
             cursor: pointer;
         }
 
-        .moveUp {}
-
         .moveDown {
             transform: rotate(180deg);
 
 
         }
     }
-
-    &__info {}
 
     &__item {
         display: flex;
@@ -483,6 +556,7 @@
     padding: 0 5px;
     margin: 0 auto;
     text-align: center;
+    margin-top: 75px;
     margin-bottom: 50px;
 
     &__title {
@@ -521,6 +595,14 @@
             border: none;
             border-radius: 157px;
             padding: 25px 80px;
+            cursor:pointer;
+            transition: all 425ms ease;
+
+            &:hover {
+                color: $orange;
+                background-color: #fff;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+            }
         }
     }
 }
@@ -539,7 +621,7 @@
         &-item {
             font-size: 1.25rem;
             margin-left: 45px;
-
+           
         }
 
         &-link {
@@ -549,9 +631,11 @@
     }
 
     &__social-list {
+
         .footer__social-item {
             font-size: 1.22rem;
             margin-left: 30px;
+        
         }
     }
 
@@ -564,10 +648,89 @@
 }
 
 
+.line-animate {
+    stroke-dashoffset: 425;
+    stroke-dasharray: 425;
+
+}
+
+.line-animate2 {
+    stroke-dashoffset: 475;
+    stroke-dasharray: 475;
+
+}
+
+.line-animate3 {
+    stroke-dashoffset: 590;
+    stroke-dasharray: 590;
+
+}
+
+.line-animate4 {
+    stroke-dashoffset: 320;
+    stroke-dasharray: 320;
+  
+}
+
+.line-animate5 {
+    stroke-dashoffset: 360;
+    stroke-dasharray: 360;
+
+
+}
+
+.line-animate6 {
+    stroke-dashoffset: 380;
+    stroke-dasharray: 380;
+
+}
+
+.animate.line-animate,
+.animate.line-animate2,
+.animate.line-animate3,
+.animate.line-animate4,
+.animate.line-animate5,
+.animate.line-animate6,
+.animate.side-line-animate {
+    animation-name: line;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+
+// .side-line-animate {
+//     stroke-dashoffset: 320;
+//     stroke-dasharray: 320;
+
+// }
+
+// .fadeIn.dot,
+// .fadeIn.text,
+// .fadeIn.circle {
+//     fill-opacity: 0;
+// }
 
 
 
+// .animate.fadeIn.text,
+// .animate.fadeIn.circle {
+//     animation: opacity 1.5s linear forwards;
+//     fill-opacity: 0;
+// }
+
+// .animate.fadeIn.dot {
+//     animation: opacity 1.5s linear forwards;
+//     animation-delay: 1.5s;
+//     fill-opacity: 0;
+// }
+
+// .animate.side-line-animate {
+//     animation: line 1.5s linear forwards;
+//     animation-delay: 1.5s;
+// }
 
 
 
+@import 'animation';
 @import 'media';
